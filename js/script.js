@@ -1,7 +1,7 @@
 new WOW().init();
 
 // Accrodion
-console.log($(".accrodion-grp").length);
+
 if ($(".accrodion-grp").length) {
     var accrodionGrp = $(".accrodion-grp");
     accrodionGrp.each(function () {
@@ -33,3 +33,7 @@ if ($(".accrodion-grp").length) {
         });
     });
 }
+
+$(".accrodion.active .accrodion-title h4::before").on('click',function(){
+$(this).removeClass("active");
+})
